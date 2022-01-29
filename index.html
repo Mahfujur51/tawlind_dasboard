@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="min-h-screen bg-gray-100">
+
+      <!-- Start Navbar  -->
+          <div class="h-16 bg-white shadow-sm pr-8 pl-8 lg:pl-64 w-full top-0 lef-0 flex items-center">
+           
+            <div class="w-6 cursor-pointer lg:hidden" id="hambarg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </div>
+           
+            <div class="relative hidden lg:block">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 absolute top-2 left-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+              <input type="text" class="block w-72 shadow border-none rounded-3xl focus:outline-none py-2 pl-11 pr-5 bg-gray-100 text-base text-gray-600">
+            </div>
+            <div class="ml-auto  items-center hidden lg:flex">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer text-gray-600 hover:text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                </svg>
+              </div>
+              <div class="ml-4 relative">
+                <div class="cursor-pointer" >
+                  <img src="https://ui-avatars.com/api/?name=Mahfujur+Rahman" class="w-8 h-8 rounded-full" id="dropdown" alt="">
+                </div>
+                <div id="dropdown_content" class="hidden absolute mt-2 z-50 rounded-md shadow-lg w-48 right-0 py-1 bg-white">
+                  <div class="px-4 py-2 text-xs text-gray-400">Manage Account</div>
+                  <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 transition">Profile</a>
+                  <div class="border-t border-gray-100"></div>
+                  <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 transition">Logout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- End Navbar  -->
+        <!-- Start sidebar  -->
+          <div class="fixed left-0 top-0 w-60 h-full bg-gray-800 shadow-md z-10  flex flex-col transition-all" id="sidebar">
+            <div class="text-white font-bold text-base uppercase text-center py-5 bg-gray-900 relative">
+              Laravel
+              <svg id="closeSidebar" xmlns="http://www.w3.org/2000/svg" class="cursor-pointer h-6 w-6 absolute right-3 top-5 lg:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+
+            </div>
+          <div class="flex flex-col justify-between flex-grow">
+            <div class="py-5">
+              <a href="#" class="flex items-center my-1 px-2 py-3 text-white border-l-4 border-blue-600 bg-gray-900">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+                Dashboard
+              </a>
+              <a href="#" class="flex items-center my-1 px-2 py-3 text-white hover:border-l-4 hover:border-blue-600 hover:bg-gray-900 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-1 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                </svg>
+                Category
+              </a>
+              <a href="#" class="flex items-center my-1 px-2 py-3 text-white hover:border-l-4 hover:border-blue-600 hover:bg-gray-900 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-1 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                </svg>
+                Product 
+              </a>
+              <a href="#" class="flex items-center my-1 px-2 py-3 text-white hover:border-l-4 hover:border-blue-600 hover:bg-gray-900 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-1 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                User 
+              </a>
+              <a href="#" class="flex lg:hidden items-center my-1 px-2 py-3 text-white hover:border-l-4 hover:border-blue-600 hover:bg-gray-900 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-1 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                </svg>
+                Logout 
+              </a>
+
+            </div>
+            <div class="lg:hidden block">
+              <div class="relative mx-4 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 absolute top-2 left-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <input type="text" class="block w-full shadow border-none rounded-3xl focus:outline-none py-2 pl-11 pr-5 bg-gray-600 text-base text-gray-100" placeholder="Search">
+              </div>
+              <div class="btoder-t border-gray-600 flex items-center py-4 px-5">
+                <div class="cursor-pointer mr-4" >
+                  <img src="https://ui-avatars.com/api/?name=Mahfujur+Rahman" class="w-8 h-8 rounded-full object-cover" id="dropdown" alt="">
+                </div>
+                <a href="" class="text-gray-200 text-md capitalize">Mahfujur </a>
+                <div class="ml-auto cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer text-gray-200 hover:text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                  </svg>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          </div>
+        <!-- End Sidebar  -->
+
+        <!-- Start Dasboard -->
+          <div class="pt-8 pr-8 pl-8 lg:pl-64">
+            <h1 class="text-3xl text-gray-700 font-bold">Welcome to Dashboard</h1>
+          </div>
+          <!-- End Dashboard  -->
+    </div>
+    <script>
+      document.getElementById('dropdown').addEventListener('click',function(){
+        document.getElementById('dropdown_content').classList.toggle('hidden')
+      })
+      document.getElementById('hambarg').addEventListener('click',function(){
+        document.getElementById('sidebar').classList.add('active');
+      })
+      document.getElementById('closeSidebar').addEventListener('click',function(){
+        document.getElementById('sidebar').classList.remove('active');
+      })
+    </script>
+  </body>
+</html>
